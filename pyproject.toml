@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentwallet-crewai-tool"
+version = "1.0.0"
+description = "Non-custodial wallet tools for CrewAI agents — EVM + Solana, spend limits, x402 micropayments, CCTP bridge"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Bill Wilson", email = "bill@ai-agent-economy.com"},
+]
+keywords = ["crewai", "wallet", "agent", "evm", "solana", "x402", "cctp", "non-custodial"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "crewai>=0.28.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-mock>=3.10.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/agentwallet-sdk/agentwallet-crewai-tool"
+Repository = "https://github.com/agentwallet-sdk/agentwallet-crewai-tool"
+"Bug Tracker" = "https://github.com/agentwallet-sdk/agentwallet-crewai-tool/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
