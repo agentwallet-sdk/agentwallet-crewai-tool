@@ -1,3 +1,6 @@
+> [!WARNING]
+> **Paused for security maintenance. Do not use in production.**
+
 # agentwallet-crewai-tool
 
 Non-custodial wallet tools for [CrewAI](https://github.com/crewAIInc/crewAI) agents. Give your crew members real on-chain wallets with spend limits — so no single agent can drain the treasury without owner sign-off.
